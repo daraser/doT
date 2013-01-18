@@ -121,6 +121,10 @@
 		if (needhtmlencode && c.selfcontained) {
 			str = "String.prototype.encodeHTML=(" + encodeHTMLSource.toString() + "());" + str;
 		}
+		
+		if(doT.debug){
+			str = doT.debug(str);	
+		} 
 		try {
 			return new Function(c.varname, str);
 		} catch (e) {
