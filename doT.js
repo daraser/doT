@@ -128,7 +128,7 @@
 		try {
 			return new Function(c.varname, str);
 		} catch (e) {
-			if (typeof console !== 'undefined') console.log("Could not create a template function: " + str);
+			if (typeof console !== 'undefined') console.log("Could not create a template function: \n" + str);
 			throw e;
 		}
 	};
